@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        caption {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>City, Country, and Population</caption>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Country</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>New York</td>
+                <td>USA</td>
+                <td>8,398,748</td>
+            </tr>
+            <tr>
+                <td>London</td>
+                <td>UK</td>
+                <td>8,982,000</td>
+            </tr>
+            <tr>
+                <td>Tokyo</td>
+                <td>Japan</td>
+                <td>13,515,271</td>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>France</td>
+                <td>2,161,000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 20px); /* 3 items per row with spacing */
+            max-width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .gallery-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .caption {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 100%; /* 1 item per row on very small screens */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; padding: 20px;">Responsive Image Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="https://example.com/image1" target="_blank">
+                <img src="https://images.unsplash.com/photo-1730130054404-c2bd8e7038c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+            </a>
+            <div class="caption">Image 1 Caption</div>
+
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image2" target="_blank">
+                <img src="https://plus.unsplash.com/premium_photo-1678565879444-f87c8bd9f241?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+                <div class="caption">Image 2 Caption</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://example.com/image3" target="_blank">
+                <img src="https://images.unsplash.com/photo-1717278087955-e8747e72069a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+                <div class="caption">Image 3 Caption</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
